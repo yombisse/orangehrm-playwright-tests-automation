@@ -34,4 +34,8 @@ npm install
 ### 3️⃣ Installer les navigateurs Playwright
 npx playwright install
 
+###👤 Auteurs
 
+Fandie Yombissé
+GitHub : https://github.com/yombisse
+Naganda Carelle
