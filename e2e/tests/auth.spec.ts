@@ -75,6 +75,11 @@ test.describe("Authentification OrangeHRM", () => {
   );
 
   await homePage.getTopMenuComponent().logout();
-  await expect(page.getByText(/404 Not Found/i)).toBeVisible();
+
+  // Essayer d'accéder directement au dashboard
+  await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
+
+  // Vérifier qu'on est bien redirigé vers la page de login
+  await expect(page).toHaveURL(/auth\/login/);
 });
 });
